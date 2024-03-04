@@ -1,0 +1,16 @@
+namespace _4March
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Your Height: ");
+            int height = int.Parse(Console.ReadLine());
+            Console.WriteLine("Your Weight: ");
+            double weight = Convert.ToDouble(Console.ReadLine());
+            double height_m = height / 100.0;
+            double bmi = Math.Round(weight / (height_m * height_m),2);
+            Console.WriteLine("Your BMI with height of {0}cm and weight of {1}kg is: {2}", height, weight, bmi);
+        }
+    }
+}
