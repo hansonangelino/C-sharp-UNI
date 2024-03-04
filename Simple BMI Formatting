@@ -10,8 +10,17 @@ namespace _4March
             Console.WriteLine("Your Weight: ");
             double weight = Convert.ToDouble(Console.ReadLine());
             double height_m = height / 100.0;
-            double bmi = Math.Round(weight / (height_m * height_m),2);
-            Console.WriteLine("Your BMI with height of {0}cm and weight of {1}kg is: {2}", height, weight, bmi);
+            double bmi = Math.Round(weight / (height_m * height_m), 2);
+            Console.WriteLine($"Your BMI with height of {height}cm and weight of {weight}kg is: {bmi}");
+            if (bmi < 18.5)
+            {
+                Console.WriteLine("You are underweight");
+            } else if (bmi >= 18.5 & bmi < 25) {
+                Console.WriteLine("You are normal");
+            } else
+            {
+                Console.WriteLine("You are overweight");
+            }
         }
     }
 }
