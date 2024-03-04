@@ -5,6 +5,8 @@ namespace _4March
     {
         static void Main(string[] args)
         {
+            //BMI
+            /*
             Console.WriteLine("Your Height: ");
             int height = int.Parse(Console.ReadLine());
             Console.WriteLine("Your Weight: ");
@@ -20,6 +22,35 @@ namespace _4March
             } else
             {
                 Console.WriteLine("You are overweight");
+            }
+            */
+
+            //IF 
+            int grade = int.Parse(Console.ReadLine());
+            if (grade >= 60)
+            {
+                if (grade >=70)
+                {
+                    if(grade >= 80)
+                    {
+                        if (grade >= 90)
+                        {
+                            Console.WriteLine("A");
+                        } else
+                        {
+                            Console.WriteLine("B");
+                        }
+                    } else
+                    {
+                        Console.WriteLine("C");
+                    }
+                } else
+                {
+                    Console.WriteLine("D");
+                }
+            } else
+            {
+                Console.WriteLine("E");
             }
         }
     }
