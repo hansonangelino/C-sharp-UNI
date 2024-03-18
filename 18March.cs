@@ -4,6 +4,7 @@ namespace _18March
     {
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine("Enter a number");
             int Date = int.Parse(Console.ReadLine());
             switch (Date)
@@ -39,6 +40,19 @@ namespace _18March
                     Console.WriteLine("Wrong Input");
                     break;
             }
+            */
+            for (int j = 1; j < 11; j++)
+            {
+                //Console.WriteLine(j);
+            }
+
+            int sum = 0;
+            for (int a = 1; a < 11; a++)
+            {
+                Console.WriteLine(a);
+                sum += a;
+            }
+            Console.WriteLine(sum);
         }
     }
 }
