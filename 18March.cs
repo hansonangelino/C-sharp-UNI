@@ -1,3 +1,4 @@
+using System;
 namespace _18March
 {
     internal class Program
@@ -66,9 +67,9 @@ namespace _18March
             do
             {
                 sum2 += input;
-                Console.WriteLine(sum2);
                 input = int.Parse(Console.ReadLine());
             } while (input != 0);
+            Console.WriteLine("sum = " + sum2);
         }
     }
 }
