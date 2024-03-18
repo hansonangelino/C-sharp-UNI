@@ -49,10 +49,9 @@ namespace _18March
             int sum = 0;
             for (int a = 1; a < 11; a++)
             {
-                Console.WriteLine(a);
                 sum += a;
+                Console.WriteLine($"a = {a:D2}, sum = {sum:D2}");
             }
-            Console.WriteLine(sum);
         }
     }
 }
