@@ -13,6 +13,7 @@ namespace _25March
 
             //Variable 2 Dimensional Array
             int[,] stu_grades = new int[3, 5];
+            string[] str = new string[5];
 
             //Operation average score
             double sum = 0;
@@ -27,15 +28,30 @@ namespace _25March
             d = grades[3];
             e = grades[4];
             */
+
+            //2D Array Output and Input list [Intermediate]
+            for (int i = 0; i < stu_grades.GetLength(0); i++)
+            {
+                str = Console.ReadLine().Split(' ');
+
+                for (global::System.Int32 j = 0; j < stu_grades.GetLength(1); j++)
+                {
+                    stu_grades[i, j] = int.Parse(str[j]);
+                }
+            }
+
             //Input for manual score
+            /*
             string[] newGrades = Console.ReadLine().Split(' ');
+            */
             //Output using For for manual grade input
+            /*
             for (int i = 0; i < newGrades.Length; i++)
             {
                 grades = int.Parse(newGrades[i]);
                 Console.WriteLine($"{course[i]}: {grades}");
             }
-
+            */
 
             //Output using For variant 1
             /*
