@@ -4,18 +4,21 @@ namespace _25March
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Class score");
             //Variable for fixed grades
             //int[] grades = {92, 88, 90, 93, 96 };
+            string[] course = { "Chinese", "English", "Religion", "Art", "History" };
 
             //Variable for manual grade input
             int grades = 0;
-            string[] course = { "Chinese", "English", "Religion", "Art", "History" };
 
+            //Variable 2 Dimensional Array
+            int[,] stu_grades = new int[3, 5];
+
+            //Operation average score
             double sum = 0;
             double average = 0;
 
+            //A way to apply each array to a separated int
             /*
             int a, b, c, d, e;
             a = grades[0];
