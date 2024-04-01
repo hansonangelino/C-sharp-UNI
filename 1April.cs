@@ -6,6 +6,8 @@ namespace _1April
         {
             Point2D p1 = new Point2D(5, 5);
             Console.WriteLine(p1);
+            p1.setX(20);
+            Console.WriteLine(p1);
         }
     }
 
@@ -23,7 +25,7 @@ namespace _1April
             return x;
         }
 
-        void setX(int newX)
+        public void setX(int newX)  //Public if you want to make is accessible from outside of the class
         {
             this.x = newX;
         }
@@ -33,7 +35,7 @@ namespace _1April
             return y;
         }
 
-        void setY (int newY)
+        public void setY (int newY) //Public if you want to make is accessible from outside of the class
         {
             this.y = newY;
         }
