@@ -5,9 +5,11 @@ namespace _1April
         static void Main(string[] args)
         {
             Point2D p1 = new Point2D(5, 5);
+            Point2D p2 = new Point2D(5, 5);
             Console.WriteLine(p1);
-            p1.setX(20);
-            Console.WriteLine(p1);
+            p1.setX(20);    //Change p1 using setX
+            Console.WriteLine(p1);  //Show updated p1
+            Console.WriteLine($"The distance between Point 1 and Point 2 is {Point2D.distance(p1,p2)}");
         }
     }
 
@@ -40,10 +42,12 @@ namespace _1April
             this.y = newY;
         }
 
-        //public static double distance(Point2D pointA, Point2D pointB)
-        //{
-
-        //}
+        public static double distance(Point2D pointA, Point2D pointB)
+        {
+            int deltaX = pointB.getX() - pointA.getX();
+            int deltaY = pointB.getY() - pointA.getY();
+            return Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
+        }
 
         public override string ToString()
         {
