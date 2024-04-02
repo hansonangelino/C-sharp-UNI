@@ -1,0 +1,69 @@
+namespace _1April
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string coor1 = Console.ReadLine();
+            string coor2 = Console.ReadLine();
+
+            string[] coordinate1 = coor1.Split(' ');
+            string[] coordinate2 = coor2.Split(' ');
+            int pxCoor = int.Parse(coordinate1[0]);
+            int pyCoor = int.Parse(coordinate1[1]);
+
+            int zxCoor = int.Parse(coordinate2[0]);
+            int zyCoor = int.Parse(coordinate2[1]);
+
+            Point2D p1 = new Point2D(pxCoor , pyCoor);
+            Point2D p2 = new Point2D(zxCoor , zyCoor);
+            //Console.WriteLine(p1);    //Call the p1
+            //p1.setX(20);    //Change p1 using setX
+            //Console.WriteLine(p1);  //Show updated p1
+            Console.WriteLine($"{Point2D.distance(p1, p2):F2}");
+        }
+    }
+
+    class Point2D
+    {
+        private int x, y;
+
+        public Point2D(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
+        public int getX()
+        {
+            return x;
+        }
+
+        public void setX(int newX)  //Public if you want to make is accessible from outside of the class
+        {
+            this.x = newX;
+        }
+
+        public int getY()
+        {
+            return y;
+        }
+
+        public void setY(int newY) //Public if you want to make is accessible from outside of the class
+        {
+            this.y = newY;
+        }
+
+        public static double distance(Point2D pointA, Point2D pointB)
+        {
+            int deltaX = pointB.getX() - pointA.getX();
+            int deltaY = pointB.getY() - pointA.getY();
+            return Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
+        }
+
+        public override string ToString()
+        {
+            return $"{x},{y}";
+        }
+    }
+}
